@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+window.onload = function() {
+    try {
+        var head = window.parent.document.getElementsByTagName("head")[0];
+        var link = window.parent.document.querySelector("link[rel~='icon']");
+        if (!link) {
+            link = window.parent.document.createElement("link");
+            link.rel = "icon";
+            head.appendChild(link);
+        }
+        link.href = "https://raw.githubusercontent.com/connorproductions/connor-productions/refs/heads/main/Screenshot%202026-02-06%20164636.ico";
+    } catch(e) {
+        console.log("Favicon injection failed:", e);
+    }
+};
+</script>
+</body>
+</html>
